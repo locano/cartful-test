@@ -1,4 +1,6 @@
-let form = document.querySelector('#product_form_6553738543222');
+let elementSize = document.getElementsByClassName('tw-text-sm tw-font-galano tw-text-night tw-opacity-65');
+
+let form = elementSize[0].closest('form');
 
 form.addEventListener('click', (event) => {
   event.preventDefault();
@@ -37,7 +39,9 @@ function createMessate() {
   message.style.color = 'black';
   let parent = document.getElementById('afterpay-messaging-widget');
   if (parent) {
-    let f1 = document.getElementById('product_form_6553738543222');
+    let elementSize = document.getElementsByClassName('tw-text-sm tw-font-galano tw-text-night tw-opacity-65');
+
+    let f1 = elementSize[0].closest('form');
     let f1_childen = f1.lastChild.children[1];
     let quantity = f1_childen.children['quantity'].value;
     switch (Number(quantity)) {
@@ -51,8 +55,8 @@ function createMessate() {
         message.innerHTML = 'Congrats! add to cart now!';
         break;
       default:
-        if(quantity > 3){
-        message.innerHTML = window.prompt("Enter your message");;
+        if (quantity > 3) {
+          message.innerHTML = window.prompt("Enter your message");;
         }
         break;
     }
