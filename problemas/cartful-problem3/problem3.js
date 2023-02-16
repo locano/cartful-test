@@ -11,46 +11,57 @@ const questions = [
             { answerName: 'Yes', answerId: 21 },
             { answerName: 'No', answerId: 22 }
         ]
+    },
+    {
+        questionId: 3, questionName: 'Are you Happy?', answers: [
+            { answerName: 'Yes', answerId: 31 },
+            { answerName: 'No', answerId: 32 }
+        ]
     }
 ];
 
-
-// Calcular las combinaciones
-
-function getCombinations(questions) {
-    const totalQuestions = questions.length;
-    const totalAnswers = questions[0].answers.length;
-    const totalCombinations = Math.pow(totalAnswers, totalQuestions);
-    console.log(`Total combinations: ${totalCombinations}`);
-    return { totalCombinations, totalQuestions, totalAnswers };
-}
-
-function createCSV(questions) {
-    const fs = require('fs');
-    const fileHeader = questions.map(q => q.questionName).join(',');
-    const fileName = 'problem3.csv';
-    // Create new File with questions names
-    fs.writeFileSync(fileName, `${fileHeader}\n`);
-
-    let { totalCombinations, totalQuestions, totalAnswers } = getCombinations(questions);
-    console.log(totalCombinations, totalQuestions, totalAnswers);
-    // Create Answers
-    for (let i = 0; i < totalCombinations; i++) {
-        const combination = [];
-        let counter = i;
-
-        for (let j = 0; j < totalQuestions; j++) {
-            const answerIndex = counter % totalAnswers;
-            counter = Math.floor(counter / totalAnswers);
-            if (questions[j].answers[answerIndex]) {
-                // Adding new combination
-                combination.unshift(questions[j].answers[answerIndex].answerName);
-            }
-        }
-
-        const fileLine = combination.join(',');
-        fs.appendFileSync(fileName, `${fileLine}\n`);
+function getAnswers() {
+    let answerArrays = [];
+    for (var i = 0; i < questions.length; i++) {
+        var question = questions[i];
+        var answers = question.answers.map(function (answer) {
+            return answer.answerName;
+        });
+        answerArrays.push(answers);
     }
+    return answerArrays;
 }
 
-createCSV(questions);
+function getCombinations(answerArray) {
+    if (answerArray.length === 0) {
+        return [[]];
+    }
+
+    const result = [];
+    const rest = getCombinations(answerArray.slice(1));
+
+    for (let i = 0; i < rest.length; i++) {
+        for (let j = 0; j < answerArray[0].length; j++) {
+            result.push([answerArray[0][j], ...rest[i]]);
+        }
+    }
+
+    return result;
+}
+
+function createCSV(combinations, questionNames) {
+    const fs = require('fs');
+    const fileName = 'problem3v2.csv';
+    // Create new File with questions names
+    fs.writeFileSync(fileName, `${questionNames}\n`);
+    // Create Answers
+    combinations.forEach(element => {
+        const fileLine = element.join(',');
+        fs.appendFileSync(fileName, `${fileLine}\n`);
+    });
+}
+
+let answerArrays = getAnswers();
+let combinations = getCombinations(answerArrays);
+const questionNames = questions.map(question => question.questionName).join(',');;
+createCSV(combinations, questionNames);
