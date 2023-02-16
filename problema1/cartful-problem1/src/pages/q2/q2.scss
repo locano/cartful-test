@@ -1,0 +1,50 @@
+.containerQ2 {
+  background-color: #f4eee5;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 166px);
+  font-family: "Roboto Condensed";
+  font-style: normal;
+}
+
+.spaceGap {
+  padding-top: 64px;
+}
+
+.bottomContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.float-left {
+  float: left;
+  text-align: left;
+}
+.float-right {
+  float: right;
+  text-align: right;
+}
+
+.back {
+  border-bottom: 2px black solid;
+  width: 53px;
+  margin-left: 24px;
+}
+.back:hover {
+  cursor: pointer;
+}
+
+.why {
+  border-bottom: 2px black solid;
+  margin-right: 24px;
+}
+.why:hover {
+  cursor: pointer;
+}

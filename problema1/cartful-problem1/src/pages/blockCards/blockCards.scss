@@ -1,0 +1,20 @@
+.blockContainer {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    gap: 16px;
+    display: flex;
+  .cardContainer {
+    width: 150px;
+    height: 164px;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.cardContainer:hover{
+    background-color: white !important;
+    cursor: pointer;
+  
+}

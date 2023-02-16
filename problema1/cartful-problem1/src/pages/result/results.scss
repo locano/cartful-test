@@ -1,0 +1,40 @@
+.resultContainer {
+  background-color: #f4eee5;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  top:166px;
+  height: 100vh;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  overflow: auto;
+}
+
+.centerElements{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.borderElement{
+    border-bottom: 1px solid #000000;
+    padding: 10px;
+    margin: 10px;
+}
+
+.containerInfo{
+    background-color: rgba(34, 34, 34, 0.05);
+    margin: 32px;
+    padding: 32px;
+    width: 80%;
+}
+
+.borderDotsRight{
+    border-right: 1px dotted gray;
+}
+.borderDotsTop{
+    border-top: 1px dotted gray;
+}

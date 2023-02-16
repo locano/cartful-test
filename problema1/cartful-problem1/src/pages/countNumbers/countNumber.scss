@@ -1,0 +1,32 @@
+.containerNumbers {
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  gap: 32px;
+}
+.number {
+  width: 32px;
+  height: 32px;
+  padding: auto;
+  border-radius: 50%;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.number:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.numberActive {
+  background-color: #eeb426;
+  color: white;
+}
+
+.numberInactive {
+  color: #000;
+  background-color: white;
+}
