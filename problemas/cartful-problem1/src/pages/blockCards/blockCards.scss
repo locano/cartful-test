@@ -1,8 +1,8 @@
 .blockContainer {
-    font-family: "Roboto Condensed";
-    font-style: normal;
-    gap: 16px;
-    display: flex;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  gap: 16px;
+  display: flex;
   .cardContainer {
     width: 150px;
     height: 164px;
@@ -13,8 +13,46 @@
   }
 }
 
-.cardContainer:hover{
-    background-color: white !important;
-    cursor: pointer;
-  
+.cardContainer:hover {
+  background-color: white !important;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 375px) {
+  .blockContainer {
+    display: flex;
+    flex-flow: wrap;
+    //centrar div
+    margin-left: 25px;
+    .cardContainer {
+      width: 159px;
+      height: 130px;
+      gap: 8px;
+    }
+
+  }
+  #card-0 {
+    transform: none !important;
+  }
+  #card-1 {
+    transform: none !important;
+  }
+  #card-2 {
+    transform: none !important;
+  }
+  #card-3 {
+    transform: none !important;
+  }
+  #card-4 {
+    transform: none !important;
+  }
+  #card-5 {
+    transform: none !important; 
+  }
+  #card-6 {
+    transform: translate(75px, 0px) !important;
+  }
 }

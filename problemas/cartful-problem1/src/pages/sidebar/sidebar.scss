@@ -3,12 +3,31 @@
 }
 
 .mainText {
-  width: 80%;
   text-align: center;
   display: inline-flex;
   justify-content: center;
-  font-size: 32px;
   font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 700;
+  width: 80%;
 }
+
+@media screen and (max-width: 1440px) {
+  .sidebarContent{
+    height: 165.2px;
+  }
+  .mainText {
+    font-size: 32px;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .sidebarContent{
+    height: 155px;
+  }
+  .mainText {
+    font-size: 24px;
+    width: auto;
+  }
+}
+

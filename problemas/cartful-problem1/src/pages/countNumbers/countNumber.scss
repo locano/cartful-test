@@ -4,7 +4,6 @@
   align-items: center;
   flex-direction: row;
   width: 100%;
-  gap: 32px;
 }
 .number {
   width: 32px;
@@ -30,3 +29,19 @@
   color: #000;
   background-color: white;
 }
+
+@media screen and (max-width: 1440px) {
+  .containerNumbers{
+    gap: 32px;
+  }
+  }
+  @media screen and (max-width: 1366px) {
+    .containerNumbers{
+      gap: 24px;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    .containerNumbers{
+      gap: 16px;
+    }
+  }

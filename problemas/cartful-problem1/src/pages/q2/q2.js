@@ -53,30 +53,32 @@ function Q2() {
   }, [active])
 
   return (
-    <div className='containerQ2 spaceGap'>
-      <CountNumber numbers={numbers} active={active} />
-      <div className='spaceGap'>
-        <h1>
-          How do you brew at home?
+    <div className='containerQ2'>
+      <div className='pt-5'>
+        <CountNumber numbers={numbers} active={active} />
+      </div>
+      <div className='pt-5'>
+        <h1 className='textTitle'>
+          HOW DO YOU BREW AT HOME?
         </h1>
       </div>
-      <div className='spaceGap'>
+      <div className='pt-5'>
         <BlockCards setActive={setActive} />
       </div>
-      <div className='spaceGap bottomContainer row'>
-        <div className='col-1 float-left' onClick={() => {
+      <div className=' bottomContainer'>
+        <div className='float-left' onClick={() => {
           navigate("/");
         }}>
           <p className='back'> {'<'} Back</p>
         </div>
-        <div className='col-10 '>
+        <div >
           {active != null ? <>
             <Button variant="dark" onClick={() => {
               navigate("/results");
             }}>Continue</Button>
           </> : null}
         </div>
-        <div className='col-1 float-right'>
+        <div className='float-right'>
           <p className='why'>Why it matters   +</p>
         </div>
 

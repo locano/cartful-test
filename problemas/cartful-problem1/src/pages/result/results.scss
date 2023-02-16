@@ -5,36 +5,118 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  top:166px;
-  height: 100vh;
   font-family: "Roboto Condensed";
   font-style: normal;
-  overflow: auto;
 }
 
-.centerElements{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 110%;
 }
 
-.borderElement{
-    border-bottom: 1px solid #000000;
-    padding: 10px;
-    margin: 10px;
+.description {
+  font-weight: 400;
+  font-size: 14.5px;
+  line-height: 150%;
+  display: inline-flex;
+  justify-content: center;
 }
 
-.containerInfo{
-    background-color: rgba(34, 34, 34, 0.05);
-    margin: 32px;
-    padding: 32px;
-    width: 80%;
+.centerElements {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.borderDotsRight{
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  place-content: center;
+}
+
+.borderElement {
+  border-bottom: 1px solid #000000;
+  padding: 10px;
+  margin: 10px;
+}
+
+.containerInfo {
+  background-color: rgba(34, 34, 34, 0.05);
+  margin: 32px;
+  padding: 32px;
+  width: 80%;
+}
+
+.borderDotsRight {
+  border-right: 1px dotted gray;
+}
+.borderDotsTop {
+  border-top: 1px dotted gray;
+}
+
+@media screen and (max-width: 1440px) {
+  .resultContainer {
+    height: auto;
+  }
+  .coffeIcon {
+    transform: scale(1);
+  }
+
+  #coffeContainer {
     border-right: 1px dotted gray;
-}
-.borderDotsTop{
+    border-bottom: none;
+  }
+
+  .infoContainer {
+    border-right: 1px dotted gray;
     border-top: 1px dotted gray;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+  }
+  .coffeIcon {
+    transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 375px) {
+  .resultContainer {
+    height: auto;
+  }
+  .title {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 130%;
+  }
+  .description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    width: 80%;
+  }
+  .coffeIcon {
+    transform: scale(0.8);
+  }
+
+  #coffeContainer {
+    border-bottom: 1px dotted gray;
+    border-right: none;
+  }
+  .infoContainer {
+    border-top: 1px dotted gray;
+    border-right: none;
+  }
+  .infoIcon{
+    display: inline-flex;
+    flex-direction: row;
+  }
 }

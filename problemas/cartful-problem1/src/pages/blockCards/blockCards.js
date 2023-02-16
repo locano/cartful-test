@@ -76,7 +76,7 @@ function BlockCards({ setActive }) {
         <div className='blockContainer'>
             {cards.map((card, index) => {
                 return (
-                    <div className='cardContainer' style={{ backgroundColor: `${selectedCard ? (selectedCard === index ? card.bgColor : '#E9E4DB') : `${card.bgColor}`}`, transform: `${card.rotation} ${card.translate}` }}
+                    <div className='cardContainer' id={`card-${index}`} style={{ backgroundColor: `${selectedCard ? (selectedCard === index ? card.bgColor : '#E9E4DB') : `${card.bgColor}`}`, transform: `${card.rotation} ${card.translate}` }}
                         onClick={() => { handleSelectedCard(index) }}>
                         <div className='cardImage'>
                             <img src={card.image} alt={card.title} />

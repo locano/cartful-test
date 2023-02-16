@@ -5,13 +5,12 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 166px);
+  height: 100vh;
   font-family: "Roboto Condensed";
   font-style: normal;
 }
-
-.spaceGap {
-  padding-top: 64px;
+.textTitle {
+  font-size: 30px;
 }
 
 .bottomContainer {
@@ -21,6 +20,7 @@
   width: 100%;
   height: 100%;
   text-align: center;
+  place-content: space-between
 }
 
 .float-left {
@@ -47,4 +47,32 @@
 }
 .why:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1440px) {
+  .containerQ2 {
+    padding-top: 0px;
+  }
+  .textTitle {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 130%;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .textTitle {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 130%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .containerQ2 {
+    padding-top: 166px;
+  }
+  .textTitle {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+  }
 }

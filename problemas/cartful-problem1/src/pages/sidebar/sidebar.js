@@ -6,15 +6,15 @@ import './sidebar.scss';
 
 function Sidebar() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className='sidebarContent'>
+    <Navbar bg="dark" variant="dark" expand="false" className='sidebarContent'>
       <Container>
         <Navbar.Brand className='mainText'>The Coffe Shop</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Barista</Nav.Link>
-            <Nav.Link href="#link">Q2</Nav.Link>
-            <Nav.Link href="#link">Results</Nav.Link>
+        <Navbar.Toggle id="basic-navbar-nav" />
+        <Navbar.Collapse>
+          <Nav>
+            <Nav.Link href="/">Barista</Nav.Link>
+            <Nav.Link href="/q2">Q2</Nav.Link>
+            <Nav.Link href="/results">Results</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

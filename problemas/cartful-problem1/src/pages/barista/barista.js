@@ -9,7 +9,7 @@ function Barista() {
   return (
     <div className='containerBarista'>
       <img src={pretty} alt="icon"></img>
-      <h1>We’ll find coffee that’s on your level.</h1>
+      <h1 className='text1 pt-4 pb-4'>We’ll find coffee that’s on your level.</h1>
       <Button variant="secondary" onClick={() => {
         navigate("/q2");
       }}>Next Page</Button>

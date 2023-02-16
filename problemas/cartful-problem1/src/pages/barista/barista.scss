@@ -5,7 +5,19 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 166px);
+    height: 100%;
     font-family: "Roboto Condensed";
     font-style: normal;
 }
+
+@media screen and (max-width: 1440px) {
+    .text1{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .text1{
+        font-size: 16px;
+    }
+}
+
